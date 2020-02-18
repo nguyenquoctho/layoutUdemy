@@ -1,0 +1,21 @@
+.studentViewing{
+    .student__content{
+        h3{
+            @include styleText($fs-2 - 1,$fw-normal,$color-black-0);
+
+        }
+       width: 90%;
+        margin: 0 auto;
+        @include card-carousel;
+        
+
+         
+       @include respond-to('medium'){
+        
+        .student__course{
+            width: 700px;
+        }
+    }
+        
+    }
+}

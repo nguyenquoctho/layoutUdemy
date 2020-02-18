@@ -1,0 +1,122 @@
+.header{
+    @include styleText($fs-1,$fw-normal,$color-black-light);
+    line-height: $line-height-0;
+    .navbar{
+        
+        padding: 0rem 0rem;
+    }
+
+    .navbar-light{
+        .navbar-toggler{
+            border:none;
+            display: flex;
+            justify-content: flex-start;
+            box-shadow: none;
+            outline: none;
+            i{
+                align-self: center;
+            }
+        }
+    }
+
+    .header__left{
+        display: flex;
+        align-items: center;
+        .navbar-brand{
+            flex-grow: .5;
+            img{
+                width: 110px;
+            }
+        }
+
+        .categories{
+            flex-grow: .5;
+            i{
+                color: $color-gray-2;
+                margin-right: $mg-0 + 4;
+
+            }
+            span{
+                @include styleText($fs-1,$fw-normal,$color-black-light);
+            }
+        }
+
+        .search__form{
+           flex-grow: 6;
+           padding: $mg-1 $mg-1 + 2;
+                @include styleSearch($color-white-cream, $color-white-cream, $color-white-0,$color-white-0);
+           .form-control{
+                 @include styleText($fs-1,$fw-normal,$color-black-light);
+                 
+           }
+        }
+    }
+    .header__right{
+
+        .navbar-nav{
+            flex-direction: row;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            .nav-item{
+                .nav-link{
+                    padding: $pd-1 + 2 $pd-1 + 3;
+                    border: 1px solid transparent;
+                    align-items: center;
+                    @include styleText($fs-1,$fw-normal,$color-black-light);
+                    &:hover{
+                       @include hoverButton($color-white-cream, $color-black-light, $color-gray-3);
+                       border-radius: $border-radius;
+                    }
+                }
+            }
+            .nav-item:nth-child(3){
+                position: relative;
+                .nav-link{
+                    width: $heigh-width-icon;
+                    height: $heigh-width-icon;
+                    align-items: center;
+                    border-radius: 50%;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    height: 90%;
+                    position: absolute;
+                    top: 5%;
+                    left: -10px;
+                    background: $color-gray-3;
+                }
+            }
+            
+        }
+    }
+
+    @include respond-to('extra-large'){
+        .navbar{
+            .bussiness, .teach-udemy{
+                display: none!important;
+            }
+           .shopping{
+               &::after{
+                  display: none!important; 
+               }
+           }
+        }
+    }
+
+    @include respond-to('medium'){
+      .categories, .search__form, .btsSign{
+          display: none!important;
+      }       
+ 
+        
+    }
+
+    @include respond-toMin('medium'){
+        .navbar-toggler{
+            display: none!important;        }
+    }
+}

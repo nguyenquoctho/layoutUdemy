@@ -1,0 +1,49 @@
+.recomandations{
+    .line{
+        height: 8px;
+        background: linear-gradient(to right, $color-purple,$color-red-0 );
+    }
+    .recomandtions__content{
+        padding: 1px 0;
+        @include styleText($fs-1,$fw-normal,$color-gray-5);
+        background: $color-black-0;
+        
+        i{
+            @include styleText(32px,$fw-normal,$color-gray-5)
+        }
+    
+        .banner__icon{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 32px;
+            margin-top: 48px;
+            visibility: visible;
+            align-self: center;
+        }
+        .banner__detail{
+            .container{
+                display: flex;
+                justify-content: space-around;
+             
+                text-align: center;
+                i{
+                    align-self: center!important;  
+                }
+                .icon-left{
+                    padding-left: 150px;
+                }
+                .icon-right{
+                    padding-right: 150px;
+                }
+            }
+        }
+    
+        @include respond-to('large'){
+            i{
+                color: transparent;
+            }
+        }
+    }
+    
+
+}

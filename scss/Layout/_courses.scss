@@ -1,0 +1,93 @@
+.courses{
+    .courses__content{
+        margin: 0 auto;
+        
+        @include respond-to('medium'){
+            // max-width: 750px!important;
+            .nav-tabs,
+            .courses__item{
+                width: 740px!important;
+                padding-left: 25px;
+            }
+        }
+
+        @include respond-toMin('large'){
+            max-width: 960px;
+            .courses__intro{
+                padding-top: 6.5rem!important;
+            }
+        }
+        @include respond-toMin('extra-large'){
+            max-width: 1170px;
+            .courses__intro{
+                padding-top: 11rem!important;
+            }
+        }
+
+      
+        
+        .courses__intro{
+            // align-self: center;
+            height: 100%;
+            padding: 0rem 1rem;
+            @include respond-toMin('large'){
+                width: 210px;
+            }
+           
+            @include respond-toMin('extra-large'){
+                width: 420px;
+            }
+            
+           
+            background: $color-gray-5;
+            h2{
+                @include styleText($fs-2 - 1,$fw-bold,$color-black-0);
+            }
+        }
+
+        .courses__menu{
+            width: 700px;
+            .nav{
+                // border: none;
+                .nav-item{
+                    .nav-link{
+                        padding: .8rem;
+                        border: none;
+                        color: $color-black-0;
+                    }
+                    &:hover{
+                        .nav-link{
+                            border: none;
+                        }
+                    }
+                    .nav-link.active{
+                        border: none;
+                        border-bottom: 5px solid $color-blue;
+                    }
+                   
+                }
+                .nav-item:first-child, .nav-item:nth-child(2), .nav-item:nth-child(4), .nav-item:nth-child(3), .nav-item:nth-child(5){
+                    margin-top: 20px;
+                    .nav-link{
+                        padding-bottom: 13px;
+                    }
+                }
+            }
+            .tab-content{
+                position: relative;
+                @include card-carousel;
+               .container{
+                   margin-left: 0;
+                   margin-right: 0;
+               }
+            }
+            
+        }
+
+        @include respond-to('large'){
+            .courses__intro{
+                display: none;
+            }
+        }
+    }
+}

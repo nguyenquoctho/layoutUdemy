@@ -1,0 +1,33 @@
+.intro{
+    background: linear-gradient(to right, $color-purple,$color-red-0 );
+    .intro__content{
+        width: 85%;
+        margin: 0 auto;
+        .intro__item{
+            .icon{
+                @include styleText(47px,$fw-normal,$color-white-0);
+            }
+            .intro__detail{
+                p:first-child{
+                    @include styleText($fs-0 +2,$fw-bold,$color-white-0);
+                }
+                p:last-child{
+                    @include styleText($fs-0,$fw-normal,$color-white-0);
+                }
+            }
+        }
+    }
+
+    @include respond-to('extra-large'){
+        .icon{
+            display: none;
+        }
+        .intro__detail{
+            text-align: center;
+        }
+    }
+
+    @include respond-to('medium'){
+       display: none;
+    }
+}

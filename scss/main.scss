@@ -1,0 +1,18 @@
+@import './Helper/variable';
+@import './Helper/mixin';
+
+@import './Base/reset';
+@import './Base/customize';
+
+@import './Component/button';
+
+@import './Layout/header';
+@import './Layout/carousel';
+@import './Layout/intro';
+@import './Layout/courses';
+@import './Layout/student';
+@import './Layout/recomandations';
+@import './Layout/categories';
+@import './Layout/feedback';
+@import './Layout/trusted';
+@import './Layout/footer';
